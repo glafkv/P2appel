@@ -1,0 +1,69 @@
+start
+	out 1 ;
+stop
+
+var x1 : 1
+var x2 : 2
+start 
+	out x1 ;
+stop
+
+start 
+	var x1 : 1
+	var x2 : 2
+	out - - x1 ;
+stop
+
+start
+	var x1 : 1
+	var x2 : 2
+	in x1 ;
+	x2 << x1 ;
+	out x1 ;
+stop
+
+start
+	var x1 : 1
+	var x2 : 2
+	in x1 ;
+	x2 < < x1 + x2 / 3 ;
+	out x1 + x2 ;	
+	cond ( ( x1 < x2 ) )
+		out [ x1 + x2 ] ;
+stop
+
+start
+	var x1 : 1
+	var x2 : 2
+	in x1 ;
+	x2 < < x1 + x2 / 3 ;
+	out x1 + x2 ;
+	iterate ( ( x1 < < x2 ) )
+		out x1 + x2 ;
+stop
+
+start
+	var x1 : 1
+	var x2 : 2
+	in x1 ;
+	x2 < < x1 + x2 / 3 ;
+	out x1 ;
+	cond ( ( x1 < x2 ) )
+	start
+		out x1 + x2 ;
+	stop ;
+stop
+
+start
+	var x1 : 1
+	var x2 : 2
+	start 
+		x1 < < 1 ;
+	stop ;
+	start
+		var x3 : 3
+		start
+			out x3 ;
+		stop ;
+	stop ;
+stop
